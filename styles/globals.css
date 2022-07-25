@@ -26,6 +26,9 @@ body {
 .signup{
   height: 450px;
 }
+.form-h2{
+  text-align: center;
+}
 label{
   text-align: left;
   margin-bottom: 5px;
@@ -79,8 +82,9 @@ span{
   height: 74.7%;
   overflow-y: scroll;
 }
+
 .user-message{
-  display: inline-block;
+  width: min-content;
   min-height: 30px;
   border: 1px solid #111;
   padding: 10px;

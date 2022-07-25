@@ -9,11 +9,10 @@ const Home = () => {
     signinWithEmailandPassword(email, password)
   }
 
- 
-
   return (
     <div>
       <div className="signin">
+        <h2 className='form-h2'>Sign in </h2>
         <form action="">
           <label htmlFor="email">Email</label>
           <input type="email" className='signup-input' name="email" value={email} onChange={(e) => setEmail(e.target.value)} id=""/>

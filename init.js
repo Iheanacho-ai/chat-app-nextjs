@@ -5,6 +5,11 @@ export const client = new Client();
 
 export const account = new Account(client);
 
+client
+    .setEndpoint('http://localhost/v1') // Your API Endpoint
+    .setProject('62d9859fd5a5923edf53') // Your project ID
+;
+
 export const signinWithEmailandPassword = async (email, password) => {
     try {
         await account.createEmailSession(email, password)
@@ -14,7 +19,3 @@ export const signinWithEmailandPassword = async (email, password) => {
         console.log(error)
     }
 }
-client
-    .setEndpoint('http://localhost/v1') // Your API Endpoint
-    .setProject('62d9859fd5a5923edf53') // Your project ID
-;

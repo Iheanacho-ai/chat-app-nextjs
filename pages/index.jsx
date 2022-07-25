@@ -14,7 +14,10 @@ const Home = () => {
         try {
           await account.create('unique()', email, password, name)
           alert("account created successfully")
+
+          // signes in the user
           signinWithEmailandPassword(email, password)
+          
         } catch (error) {
           console.log(error)
         }
@@ -28,15 +31,16 @@ const Home = () => {
   return (
     <div>
       <div className="signup">
+        <h2 className='form-h2'>Sign up</h2>
         <form action="">
           <label htmlFor="name">Name</label>
-          <input type="text" className='signup-input' name="name" ivalue={name} onChange={(e) => setName(e.target.value)} id="" />
+          <input type="text" className='signup-input' name="name" value={name} onChange={(e) => setName(e.target.value)} id="" />
           <label htmlFor="email">Email</label>
           <input type="email" className='signup-input' name="email" value={email} onChange={(e) => setEmail(e.target.value)} id=""/>
           <label htmlFor="password">Password</label>
-          <input type="password" className='signup-input' name="" value={password} onChange={(e) => setPassword(e.target.value)} id=""/>
+          <input type="password" className='signup-input' name="password" value={password} onChange={(e) => setPassword(e.target.value)} id=""/>
           <label htmlFor="password">Confirm Password</label>
-          <input type="password" className='signup-input' name="" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} id=""/>
+          <input type="password" className='signup-input' name="confirm password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} id=""/>
           <button type='button' className= "button" onClick={signupWithEmailandPassword}>Sign Up</button>
           <p>Already have an account, <Link href="/signin" className='link'>Sign in</Link></p>
         </form>
